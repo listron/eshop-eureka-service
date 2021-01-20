@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: test
+
+---
+server:
+  port: 7001
+spring:
+  profiles: dev
+  application:
+    name: eurka-server-7001
+eureka:
+  instance:
+    appname: ${spring.application.name}
+    hostname: eureka7001.com
+    prefer-ip-address: false
+  client:
+    register-with-eureka: false  #表示不向eureka注册中心注册自己
+    fetch-registry: false  #为false，表示自己是注册中心
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+---
+server:
+  port: 7001
+spring:
+  profiles: test
+  application:
+    name: eurka-server-7001
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: eureka7001.com
+  client:
+    register-with-eureka: true  #false 表示不向eureka注册中心注册自己
+    fetch-registry: false  #为false，表示自己是注册中心
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
