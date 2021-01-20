@@ -12,6 +12,7 @@
     <groupId>com.listron.eshop</groupId>
     <artifactId>springcloud-eureka-7001</artifactId>
     <name>eureka-service</name>
+    <version>0.0.1-SNAPSHOT</version>
     <description>Demo project for Spring Boot</description>
     
     <properties>
@@ -26,28 +27,25 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
-    </dependencyManagement>>
+    </dependencyManagement>
 
-<dependencies>
-    <!--   eureka服务端 -->
-    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        <version>1.4.7.RELEASE</version>
-    </dependency>
-
-
+    <dependencies>
+        <!--   eureka服务端 -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
 
 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-devtools</artifactId>
-    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
 
-</dependencies>
+    </dependencies>
 
     <build>
         <resources>
